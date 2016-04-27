@@ -9,8 +9,10 @@ export default Ember.Component.extend({
   init() {
     this._super(...arguments);
     Ember.run.next(() => {
-      this.attrs._dropdownRoot.set('_dropdownMenuId', this.elementId);
-      this.attrs._dropdownRoot.setupDropdown();
+      if (this.attrs._dropdownRoot && this.attrs._dropdownRoot.set) {
+        this.attrs._dropdownRoot.set('_dropdownMenuId', this.elementId);
+        this.attrs._dropdownRoot.setupDropdown();
+      }
     });
   }
 });

@@ -3,6 +3,7 @@ import defaultConfig from 'ember-cli-materialize/config/default';
 import config from '../config/environment';
 
 const { getWithDefault } = Ember;
+const assign = Ember.assign || Ember.mixin;
 
 function setupEmberMaterialize(application, config) {
   const { materialize } = config
@@ -15,7 +16,7 @@ function setupEmberFlash(application, config, configWithDefaults) {
     Ember.get(configWithDefaults, 'flashMessageDefaults'));
   const c = application.resolveRegistration('config:flash-messages');
   if (c) {
-    const newConfig = Ember.$.extend(c, fm);
+    const newConfig = assign(c, fm);
     for (let k in fm) {
       c[k] = fm[k]
     }
@@ -23,7 +24,7 @@ function setupEmberFlash(application, config, configWithDefaults) {
 }
 
 export function initialize(application) {
-  const cfg = Ember.$.extend(true, defaultConfig, config);
+  const cfg = assign(defaultConfig, config);
   setupEmberFlash(application, config, cfg);
   setupEmberMaterialize(application, cfg);
   // application.inj/ect('route', 'foo', 'service:foo');

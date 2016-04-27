@@ -3,6 +3,7 @@ import layout from '../templates/components/md-toast';
 import RecognizerMixin from 'ember-gestures/mixins/recognizers';
 
 const { Component, inject, run: { next, cancel, later }, computed, computed: { readOnly }, getWithDefault } = Ember;
+const assign = Ember.assign || Ember.mixin;
 
 export default Component.extend(RecognizerMixin, {
   recognizers: 'pan',
@@ -24,9 +25,10 @@ export default Component.extend(RecognizerMixin, {
     this.set('_inlineStyle', {});
   },
   _toastStyle: computed('content.type', function() {
-    return Ember.$.extend(true,
-      Ember.$.extend({}, this.get('md-config.options.toasts.styles.default')),
-      Ember.$.extend({}, this.get(`md-config.options.toasts.styles.${this.get('content.type')}`)))
+    return assign(
+      assign({}, this.get('md-config.options.toasts.styles.default') || {}),
+      assign({}, this.get(`md-config.options.toasts.styles.${this.get('content.type')}`) || {})
+    );
   }),
   style: computed('_inlineStyle', '_inlineStyle.left', '_inlineStyle.opacity', function() {
     let props = [];

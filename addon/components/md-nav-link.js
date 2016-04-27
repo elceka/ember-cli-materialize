@@ -5,5 +5,6 @@ export default Ember.LinkComponent.extend({
   classNames: ['md-nav-link'],
   layout,
   iconClass: 'left',
-  tagName: 'li'
+  tagName: 'li',
+  href: 'index'
 });
