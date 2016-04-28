@@ -3,7 +3,7 @@ import layout from '../templates/components/md-btn';
 import Button from '../mixins/md-button';
 import DropdownTrigger from '../mixins/dropdown-trigger';
 
-const { computed, Component } = Ember;
+const { Component } = Ember;
 
 export default Component.extend(Button, DropdownTrigger, {
   classNames: ['md-btn'],

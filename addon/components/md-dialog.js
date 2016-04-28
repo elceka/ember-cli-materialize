@@ -20,7 +20,7 @@ export default Component.extend({
     this._super(...arguments);
     next(() => {
       this.set('active', true);
-    })
+    });
   },
   actions: {
     beginClose() {

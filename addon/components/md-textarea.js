@@ -4,7 +4,7 @@ import TextComponent from '../mixins/text-component';
 
 const { computed, Component } = Ember;
 
-export default Ember.Component.extend(TextComponent, {
+export default Component.extend(TextComponent, {
   classNames: ['md-textarea', 'input-field'],
   layout,
   _classesForTextarea: computed('_classesForInput', function() {

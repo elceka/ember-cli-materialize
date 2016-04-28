@@ -22,13 +22,13 @@ export default Component.extend({
   _barLoaderClass: computed('value', 'circular', function() {
     const x = this.getProperties(['circular', 'value']);
     if (x.circular) {
-
+      return '';
     } else {
       return this.get('value') ? 'determinate' : 'indeterminate';
     }
   }),
   _barStyle: computed('max', 'value', function() {
-    return new Ember.Handlebars.SafeString(`width: ${100 * this.get('value') / this.get('max')}%`);
+    return new Ember.String.htmlSafe(`width: ${100 * this.get('value') / this.get('max')}%`);
   }),
   layout,
   init() {

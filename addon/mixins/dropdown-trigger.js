@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { computed, Mixin } = Ember;
+const { computed, Mixin, run: { scheduleOnce } } = Ember;
 
 export default Mixin.create({
   attributeBindings: ['data-activates'],
@@ -11,8 +11,8 @@ export default Mixin.create({
     return !!this.get('_dropdownMenuId');
   }),
   setupDropdown() {
-    Ember.run.scheduleOnce('afterRender', () => {
+    scheduleOnce('afterRender', () => {
       this.$().dropdown();
-    })
+    });
   }
-})
+});

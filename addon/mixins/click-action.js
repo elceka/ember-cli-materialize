@@ -7,4 +7,4 @@ export default Mixin.create({
     this.sendAction('on-click');
     this.sendAction();
   }
-})
+});

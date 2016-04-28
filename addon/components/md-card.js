@@ -1,9 +1,9 @@
 import Ember from 'ember';
 import layout from '../templates/components/md-card';
 
-const { computed, Component } = Ember;
+const { computed, computed: { empty }, Component } = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNames: ['md-card', 'card'],
   title: null,
   image: null,
@@ -11,6 +11,6 @@ export default Ember.Component.extend({
   _extraTitleClasses: computed('_hasReveal', function() {
     return this.get('_hasReveal') ? 'activator' : '';
   }),
-  _isTitleInContent: computed.empty('image'),
+  _isTitleInContent: empty('image'),
   layout
 });

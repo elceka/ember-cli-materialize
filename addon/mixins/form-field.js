@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { computed, computed: { oneWay }, Mixin } = Ember;
+const { computed, computed: { empty }, Mixin } = Ember;
 
 export default Mixin.create({
   errorMessages: null,
@@ -11,7 +11,7 @@ export default Mixin.create({
   validate: computed('errorMessages', function() {
     return this.get('errorMessages') !== null;
   }),
-  valid: computed.empty('errorMessages'),
+  valid: empty('errorMessages'),
   error: computed('errorMessages.[]', function() {
     return this.get('errorMessages.firstObject');
   })

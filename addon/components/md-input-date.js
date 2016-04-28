@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import Input from './md-input';
 import layout from '../templates/components/md-input-date';
 

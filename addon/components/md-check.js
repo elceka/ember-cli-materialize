@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import layout from '../templates/components/md-check';
 
-const { computed, Component } = Ember;
+const { Component } = Ember;
 
 export default Component.extend({
   classNames: ['md-check'],

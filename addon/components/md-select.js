@@ -1,8 +1,7 @@
 import Ember from 'ember';
 import layout from '../templates/components/md-select';
-import TextComponent from '../mixins/text-component';
 
-const { run: {scheduleOnce}, computed, Component } = Ember;
+const { run: { scheduleOnce }, computed, Component } = Ember;
 
 export default Component.extend({
   classNames: ['md-select', 'input-field'],
@@ -24,9 +23,9 @@ export default Component.extend({
     else {return null;}
   }),
 
-  didInitAttrs(attrs) {
+  didInitAttrs() {
     this._super(...arguments);
-    var content = this.get('content');
+    let content = this.get('content');
     if (!content) {
       this.set('content', []);
     }
@@ -50,7 +49,7 @@ export default Component.extend({
           icon: this.get('contentIconProp') ? Ember.get(x, this.get('contentIconProp')) : null
         };
       });
-      return choices
+      return choices;
     }
   }),
 
