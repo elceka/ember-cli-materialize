@@ -1,8 +1,7 @@
-<div class="row">
-  <div class="col s12">
-    <h5>Params</h5>
-  </div>
-</div>
-{{yield (hash
-    param=(component 'x-component-doc-param')
-)}}
+
+{{#md-collection as |c|}}
+  {{c.header text="Params"}}
+  {{yield (hash
+      param=(component 'x-component-doc-param')
+  )}}
+{{/md-collection}}

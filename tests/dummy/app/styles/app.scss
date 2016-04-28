@@ -2,7 +2,12 @@
 @import 'components/color';
 
 // Custom color settings go here
-$primary-color: color("blue-grey", "darken-2");
+$primary-color: color("blue", "accent-2");
+$secondary-color:  color("materialize-red", "base");
+$navbar-height: 72px;
+// $medium-screen: 603px;
+// $medium-screen-up: $medium-screen + 1px;
+// $navbar-font-color: color("white", "lighten-2");
 
 @import 'components/variables';
 
@@ -11,6 +16,7 @@ $roboto-font-path: '/assets/';
 
 @import "x-example";
 @import "x-component-doc";
+
 .code {
   padding: 2px;
   background-color: color('grey', 'lighten-2');
@@ -20,4 +26,8 @@ $roboto-font-path: '/assets/';
 
 #qunit-modulefilter {
   @extend .browser-default;
+}
+
+body {
+  background-color: color('blue-grey', 'darken-2');
 }

@@ -1,7 +1,6 @@
 import Ember from 'ember';
+import CollectionItem from 'ember-cli-materialize/components/md-collection-item';
 
-const { Component } = Ember;
-
-export default Component.extend({
+export default CollectionItem.extend({
   classNames: ['x-component-doc-param']
 });

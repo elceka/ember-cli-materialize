@@ -1,24 +1,23 @@
-<div class="row">
-  {{#if title}}
-    <div class="col s12">
-      <h5 class="title">{{title}}</h5>
-    </div>
-  {{/if}}
-  {{#if hasBlock}}
-      {{#if (eq exampleExtension 'hbs')}}
-        <div class="col s12 description">
-        {{yield}}
+{{#md-card title=(concat "Example: " exampleName) as |c|}}
+  {{#c.content}}
+      {{#if (and hasBlock (eq exampleExtension 'hbs'))}}
+        <div class="row">
+          <div class="col s12">
+            {{yield}}
+          </div>
         </div>
       {{/if}}
-  {{/if}}
-  <div class="col {{_horizClassOption2}} s12 rendered-example">
-    {{#if (eq exampleExtension 'hbs')}}
-      {{partial nameOfPartial}}
-    {{else}}
-      {{yield}}
-    {{/if}}
-  </div>
-  <div class="col {{_horizClassOption1}} s12 hbs-code">
-    {{code-snippet name=nameOfTemplate}}
-  </div>
-</div>
+      <div class="row">
+        <div class="col {{_horizClassOption2}} s12 rendered-example">
+          {{#if (eq exampleExtension 'hbs')}}
+            {{partial nameOfPartial}}
+          {{else}}
+            {{yield}}
+          {{/if}}
+        </div>
+        <div class="col {{_horizClassOption1}} s12 hbs-code">
+          {{code-snippet name=nameOfTemplate}}
+        </div>
+      </div>
+  {{/c.content}}
+{{/md-card}}

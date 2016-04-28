@@ -1,13 +1,13 @@
 {{#md-btn icon='cloud' as |b|}}
   Official Ember Repos
   {{#b.dropdown as |d|}}
-    {{d.btn text="Ember.js"
+    {{d.btn label="Ember.js"
       on-click=(action 'wasClicked' 'Ember.js')}}
-    {{d.btn text="Ember Data"
+    {{d.btn label="Ember Data"
       on-click=(action 'wasClicked' 'Ember Data')}}
-    {{d.btn text="Ember-CLI"
+    {{d.btn label="Ember-CLI"
       on-click=(action 'wasClicked' 'Ember-CLI')}}
-    {{d.btn text="Liquid Fire"
+    {{d.btn label="Liquid Fire"
       on-click=(action 'wasClicked' 'Liquid Fire')}}
   {{/b.dropdown}}
 {{/md-btn}}

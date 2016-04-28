@@ -1,10 +1,7 @@
-<div class="row">
-  <div class="col s12">
-    <span class="action-name">
-      {{name}}
-    </span>
-  </div>
-  <div class="col s12">
-    {{yield}}
-  </div>
-</div>
+<span class="title">{{name}}</span>
+{{#if type}}
+  <span class="param-type right">{{type}}</span>
+{{/if}}
+{{#if hasBlock}}
+  <p class='first-line'>{{yield}}</p>
+{{/if}}

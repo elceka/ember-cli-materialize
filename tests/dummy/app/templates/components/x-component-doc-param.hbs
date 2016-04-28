@@ -1,23 +1,12 @@
-<div class="row">
-  <div class="col s12">
-    <span class="param-name">
-      {{name}}
-    </span>
-    <span class="param-type">
-      <span class="badge sm no-right blue white-text">
-        {{type}}
-      </span>
-    </span>
-    {{#if default}}
-    <span class="default-value right">
-      defaults to:
-      <span class="grey darken-2 white-text badge no-right sm">
-        {{default}}
-      </span>
-    </span>
-    {{/if}}
-  </div>
-  <div class="col s12">
-    {{yield}}
-  </div>
-</div>
+<span class="title">{{name}}</span>
+{{#if type}}
+  <span class="param-type right">{{type}}</span>
+{{/if}}
+<p class='first-line'>
+  {{#if default}}
+    <div class="default-value">Defaults to: {{default}}</div>
+  {{/if}}
+</p>
+{{#if hasBlock}}
+  <p class='second-line'>{{yield}}</p>
+{{/if}}

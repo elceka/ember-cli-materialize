@@ -18,6 +18,9 @@ export default Component.extend({
   nameOfPartial: computed('exampleScope', 'name', function() {
     return `${this.get('exampleScope')}${this.get('name')}`;
   }),
+  exampleName: computed('title', 'name', function() {
+    return this.get('title') || this.get('name');
+  }),
   _horizClassOption1: computed('horizSplit', function() {
     const s = this.get('horizSplit');
     if (s < 0) {

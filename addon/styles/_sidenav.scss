@@ -1,13 +1,13 @@
 .side-nav {
   .md-nav-link {
-    i.material-icons {
+    & > a > .material-icons {
       margin-right: 1rem;
       position: relative;
-      top: 5px;
+      top: 18px;
     }
   }
 }
 
-.md-nav .side-nav {
-  transform: none;
-}
+// .md-nav .side-nav {
+//   transform: none;
+// }
