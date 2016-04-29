@@ -8,5 +8,5 @@ export default LinkComponent.extend(Button, {
   classNames: ['md-btn-link'],
   label: computed.alias('linkTitle'),
   layout,
-  href: 'index'
+  href: ''
 });

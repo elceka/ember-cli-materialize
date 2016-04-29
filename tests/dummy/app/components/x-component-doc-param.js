@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import CollectionItem from 'ember-cli-materialize/components/md-collection-item';
 
 export default CollectionItem.extend({
