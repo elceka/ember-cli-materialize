@@ -11,42 +11,42 @@
   {{#n.menu class='right' as |m|}}
     {{#m.btn label='Components' as |b|}}
       {{#b.dropdown as |d|}}
-        {{d.link-to 'Button' 'button'}}
-        {{d.link-to 'Card' 'card'}}
-        {{d.link-to 'Collapsible' 'collapsible'}}
-        {{d.link-to 'Collection' 'collection'}}
-        {{d.link-to 'Forms' 'forms'}}
-        {{d.link-to 'Loader' 'loader'}}
-        {{d.link-to 'Nav' 'nav'}}
-        {{d.link-to 'Pagination' 'pagination'}}
-        {{d.link-to 'Side-Nav' 'sidenav'}}
-        {{d.link-to 'Modal' 'modal'}}
-        {{d.link-to 'Tabs' 'tabs'}}
+        {{#d.link-to 'button'}}Button{{/d.link-to}}
+        {{#d.link-to 'card'}}Card{{/d.link-to}}
+        {{#d.link-to 'collapsible'}}Collapsible{{/d.link-to}}
+        {{#d.link-to 'collection'}}Collection{{/d.link-to}}
+        {{#d.link-to 'forms'}}Forms{{/d.link-to}}
+        {{#d.link-to 'loader'}}Loader{{/d.link-to}}
+        {{#d.link-to 'nav'}}Nav{{/d.link-to}}
+        {{#d.link-to 'pagination'}}Pagination{{/d.link-to}}
+        {{#d.link-to 'sidenav'}}SideNav{{/d.link-to}}
+        {{#d.link-to 'modal'}}Modal{{/d.link-to}}
+        {{#d.link-to 'tabs'}}Tabs{{/d.link-to}}
         <li class="divider"></li>
-        {{d.link-to 'Toasts' 'toasts'}}
-        {{d.link-to 'Breadcrumbs' 'crumb'}}
-        {{d.link-to 'Pushpin' 'pushpin'}}
+        {{#d.link-to 'toasts'}}Toasts{{/d.link-to}}
+        {{#d.link-to 'crumb'}}Breadcrumbs{{/d.link-to}}
+        {{#d.link-to 'pushpin'}}Pushpin{{/d.link-to}}
       {{/b.dropdown}}
     {{/m.btn}}
   {{/n.menu}}
   </div>
 
   {{#n.sidenav as |sn|}}
-    {{sn.link-to 'Button' 'button'}}
-    {{sn.link-to 'Card' 'card'}}
-    {{sn.link-to 'Collapsible' 'collapsible'}}
-    {{sn.link-to 'Collection' 'collection'}}
-    {{sn.link-to 'Forms' 'forms'}}
-    {{sn.link-to 'Loader' 'loader'}}
-    {{sn.link-to 'Nav' 'nav'}}
-    {{sn.link-to 'Pagination' 'pagination'}}
-    {{sn.link-to 'Side-Nav' 'sidenav'}}
-    {{sn.link-to 'Modal' 'modal'}}
-    {{sn.link-to 'Tabs' 'tabs'}}
+    {{#sn.link-to 'button'}} Button {{/sn.link-to}}
+    {{#sn.link-to 'card'}} Card {{/sn.link-to}}
+    {{#sn.link-to 'collapsible'}} Collapsible {{/sn.link-to}}
+    {{#sn.link-to 'collection'}} Collection {{/sn.link-to}}
+    {{#sn.link-to 'forms'}} Forms {{/sn.link-to}}
+    {{#sn.link-to 'loader'}} Loader {{/sn.link-to}}
+    {{#sn.link-to 'nav'}} Nav {{/sn.link-to}}
+    {{#sn.link-to 'pagination'}} Pagination {{/sn.link-to}}
+    {{#sn.link-to 'sidenav'}} SideNav {{/sn.link-to}}
+    {{#sn.link-to 'modal'}} Modal {{/sn.link-to}}
+    {{#sn.link-to 'tabs'}} Tabs {{/sn.link-to}}
     <li class="divider"></li>
-    {{sn.link-to 'Toasts' 'toasts'}}
-    {{sn.link-to 'Breadcrumbs' 'crumb'}}
-    {{sn.link-to 'Pushpin' 'pushpin'}}
+    {{#sn.link-to 'toasts'}} Toasts {{/sn.link-to}}
+    {{#sn.link-to 'crumb'}} Breadcrumbs {{/sn.link-to}}
+    {{#sn.link-to 'pushpin'}} Pushpin {{/sn.link-to}}
   {{/n.sidenav}}
 {{/md-nav}}
 </div>

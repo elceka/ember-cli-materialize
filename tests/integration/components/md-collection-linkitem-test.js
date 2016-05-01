@@ -6,12 +6,6 @@ moduleForComponent('md-collection-linkitem', 'Integration | Component | md colle
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
-  this.render(hbs`{{md-collection-linkitem 'Index' 'index'}}`);
-
-  assert.equal(this.$().text().trim(), 'Index');
 
   // Template block usage:
   this.render(hbs`

@@ -6,12 +6,6 @@ moduleForComponent('md-tab-link', 'Integration | Component | md tab link', {
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
-  this.render(hbs`{{md-tab-link "Index" "index"}}`);
-
-  assert.equal(this.$().text().trim(), 'Index');
 
   // Template block usage:
   this.render(hbs`

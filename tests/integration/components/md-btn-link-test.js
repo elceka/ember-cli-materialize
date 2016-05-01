@@ -7,10 +7,6 @@ moduleForComponent('md-btn-link', 'Integration | Component | md btn link', {
 
 test('it renders', function(assert) {
 
-  this.render(hbs`{{md-btn-link 'Index' 'index'}}`);
-
-  assert.equal(this.$().text().trim(), 'Index');
-
   // Template block usage:
   this.render(hbs`
     {{#md-btn-link 'index'}}
