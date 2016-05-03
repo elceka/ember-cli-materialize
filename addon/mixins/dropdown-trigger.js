@@ -12,7 +12,9 @@ export default Mixin.create({
   }),
   setupDropdown() {
     scheduleOnce('afterRender', () => {
-      this.$().dropdown();
+      if (typeof FastBoot === 'undefined') {
+        this.$().dropdown();
+      }
     });
   }
 });

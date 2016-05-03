@@ -11,17 +11,17 @@
   {{#n.menu class='right' as |m|}}
     {{#m.btn label='Components' as |b|}}
       {{#b.dropdown as |d|}}
-        {{#d.link-to 'button'}}Button{{/d.link-to}}
-        {{#d.link-to 'card'}}Card{{/d.link-to}}
-        {{#d.link-to 'collapsible'}}Collapsible{{/d.link-to}}
-        {{#d.link-to 'collection'}}Collection{{/d.link-to}}
-        {{#d.link-to 'forms'}}Forms{{/d.link-to}}
-        {{#d.link-to 'loader'}}Loader{{/d.link-to}}
-        {{#d.link-to 'nav'}}Nav{{/d.link-to}}
-        {{#d.link-to 'pagination'}}Pagination{{/d.link-to}}
-        {{#d.link-to 'sidenav'}}SideNav{{/d.link-to}}
-        {{#d.link-to 'modal'}}Modal{{/d.link-to}}
-        {{#d.link-to 'tabs'}}Tabs{{/d.link-to}}
+        {{d.link-to 'Button' 'button'}}
+        {{d.link-to 'Card' 'card'}}
+        {{d.link-to 'Collapsible' 'collapsible'}}
+        {{d.link-to 'Collection' 'collection'}}
+        {{d.link-to 'Forms' 'forms'}}
+        {{d.link-to 'Loader' 'loader'}}
+        {{d.link-to 'Nav' 'nav'}}
+        {{d.link-to 'Pagination' 'pagination'}}
+        {{d.link-to 'SideNav' 'sidenav'}}
+        {{d.link-to 'Modal' 'modal'}}
+        {{d.link-to 'Tabs' 'tabs'}}
         <li class="divider"></li>
         {{#d.link-to 'toasts'}}Toasts{{/d.link-to}}
         {{#d.link-to 'crumb'}}Breadcrumbs{{/d.link-to}}
