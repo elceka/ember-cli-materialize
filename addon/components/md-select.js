@@ -23,7 +23,7 @@ export default Component.extend({
     else {return null;}
   }),
 
-  didInitAttrs() {
+  init() {
     this._super(...arguments);
     let content = this.get('content');
     if (!content) {

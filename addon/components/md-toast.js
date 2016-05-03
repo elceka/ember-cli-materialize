@@ -2,7 +2,23 @@ import Ember from 'ember';
 import layout from '../templates/components/md-toast';
 import RecognizerMixin from 'ember-gestures/mixins/recognizers';
 
-const { Component, inject, run: { next, cancel, later }, computed, computed: { readOnly }, getWithDefault } = Ember;
+const {
+  Component,
+  inject,
+  run: {
+    next,
+    cancel,
+    later
+  },
+  computed,
+  computed: {
+    readOnly
+  },
+  String: {
+    htmlSafe
+  },
+  getWithDefault
+} = Ember;
 const assign = Ember.assign || Ember.mixin;
 
 export default Component.extend(RecognizerMixin, {
@@ -38,7 +54,7 @@ export default Component.extend(RecognizerMixin, {
     if (this.get('_inlineStyle.opacity')) {
       props.push(`opacity: ${this.get('_inlineStyle.opacity')}`);
     }
-    return new Ember.Handlebars.SafeString(props.join('; '));
+    return htmlSafe(props.join('; '));
   }),
   _alertIcon: computed('content.icon', 'content.type', function() {
     const icon = this.get('content.icon');
@@ -76,7 +92,7 @@ export default Component.extend(RecognizerMixin, {
     const dx = Ember.get(e, 'gesture.deltaX') || Ember.get(e, 'originalEvent.gesture.deltaX');
     const activationDistance = this.get('md-config.toasts.activationDistance');
     this.set('panning', true);
-    var opacityPercent = 1-Math.abs(dx / activationDistance);
+    var opacityPercent = 1 - Math.abs(dx / activationDistance);
     if (opacityPercent < 0) {
       opacityPercent = 0;
     }

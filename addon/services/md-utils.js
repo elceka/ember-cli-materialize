@@ -14,13 +14,13 @@ export default Service.extend(Evented, {
   },
   scrollTop: computed(function() {
     return Ember.$(window).scrollTop();
-  }),
+  }).volatile(),
   windowHeight: computed(function() {
     return Ember.$(window).outerHeight();
-  }),
+  }).volatile(),
   docHeight: computed(function() {
     return Ember.$(document).outerHeight();
-  }),
+  }).volatile(),
   scrollRemaining: computed('docHeight', 'windowHeight', 'scrollTop', function() {
     return this.get('docHeight') - this.get('scrollTop') - this.get('windowHeight');
   })
