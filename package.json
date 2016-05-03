@@ -57,7 +57,7 @@
     "ember-hammertime": "runspired/ember-hammertime#d3ece0f90acebf83ce3427c6bd42911c1878bc04",
     "ember-inflector": "1.9.4",
     "ember-load-initializers": "^0.5.1",
-    "ember-material-design-icons-shim": "0.0.2",
+    "ember-material-design-icons-shim": "~0.1.0",
     "ember-materialize-shim": "~0.1.0",
     "ember-modal-dialog": "~0.8.3",
     "ember-pikaday": "1.0.0",
