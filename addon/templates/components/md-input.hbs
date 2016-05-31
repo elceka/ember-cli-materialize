@@ -8,10 +8,12 @@
   placeholder=placeholder
   disabled=disabled
   class=_classesForInput
-  onkeyup=(action 'onKeyUp')
-  onkeydown=(action 'onKeyDown')
-  onchange=(action 'onChange')
-  onblur=(action 'onBlur') }}
+  key-up=(action 'onKeyUp')
+  key-press=(action 'onKeyDown')
+  key-press=(action 'onChange')
+  focus-out=(action 'onBlur')
+  enter=(action 'onEnter')
+}}
 <label
   for={{_inputId}}
   class="{{labelClass}} {{if active 'active'}}"

@@ -49,5 +49,9 @@ export default Mixin.create(FormField, {
       this._super(...arguments);
       this.sendAction('on-blur');
     },
+    onEnter() {
+      this._super(...arguments);
+      this.sendAction('enter');
+    }
   }
 });
